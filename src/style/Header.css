@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Black background for consistency */
+}
+
+.join-btn-mobile {
+    background-color: #E2C081; /* Same color as before */
+    border: none;
+    color: black; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Add some space above */
+    width: 50%; /* Full width on mobile */
+}
+
+.header__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.header__nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the nav items */
+}
+
+.header__nav ul {
+    list-style: none;
+    font-weight: bolder;
+    /* font-size: ; */
+    margin-top: 30px;
+    margin-right: 350px;
+    justify-content: center; /* Center the list items within the nav */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text for links */
+    font-size: 16px;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header__nav {
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #000; /* Black background for mobile */
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
+    }
+
+    .header__nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .header__nav ul {
+        margin-left: 300px;
+        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px; /* Space out items vertically */
+    }
+
+    .join-btn-mobile {
+        background-color: #E2C081; /* Same color as before */
+        border: none;
+        justify-content: space-around;
+        color: black; /* Text color */
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 10px; /* Add some space above */
+        width: 80%; /* Full width on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger button */
+    }
+}
+
+/* Close button for the form */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px; /* Larger font size for visibility */
+    color: #333; /* Close button color */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
